@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Website</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/academics.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+  
+  <div class="nav-container">
+
+    <div class="nav">
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="School Logo">
+        </a>
+      </div>
+
+      <!-- MENU ICON -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- NAV LINKS (desktop) -->
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+  <!-- JS -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+
+<section class="hero-page" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070');">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-container" data-aos="fade-up">
+        <span class="hero-badge">Quality Education</span>
+        
+        <h1 class="hero-title">ACADEMICS</h1>
+        
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="arrow-icon"><i class="ri-arrow-right-double-line"></i></span>
+            <span class="current-page">Academics</span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="acs-curriculum-wrapper">
+    <div class="acs-container">
+        
+        <div class="acs-header" data-aos="fade-down">
+            <span class="acs-tag">EDUCATIONAL PATHWAY</span>
+            <h2 class="acs-title">CURRICULUM <span>& BOARD DETAILS</span></h2>
+            <p class="acs-subtitle">Providing a structured and comprehensive learning experience aligned with global standards.</p>
+        </div>
+
+        <div class="acs-grid">
+            <div class="acs-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="acs-icon-box">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <h3 class="acs-card-title">Primary Education</h3>
+                <p class="acs-card-text">Foundational learning focusing on literacy, numeracy, and social skills through activity-based modules.</p>
+                <ul class="acs-features">
+                    <li><i class="fas fa-check-circle"></i> CBSE Board Curriculum</li>
+                    <li><i class="fas fa-check-circle"></i> Interactive Classrooms</li>
+                </ul>
+            </div>
+
+            <div class="acs-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="acs-icon-box">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3 class="acs-card-title">Secondary Level</h3>
+                <p class="acs-card-text">Advanced curriculum emphasizing critical thinking, scientific inquiry, and language proficiency.</p>
+                <ul class="acs-features">
+                    <li><i class="fas fa-check-circle"></i> NCERT Guidelines</li>
+                    <li><i class="fas fa-check-circle"></i> Skill-based Assessment</li>
+                </ul>
+            </div>
+
+            <div class="acs-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="acs-icon-box">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="acs-card-title">Higher Secondary</h3>
+                <h3 class="acs-card-title" style="display:none;">Board Info</h3>
+                <p class="acs-card-text">Specialized streams (MPC, BiPC) designed to bridge the gap between school and professional careers.</p>
+                <ul class="acs-features">
+                    <li><i class="fas fa-check-circle"></i> Board of Int. Education</li>
+                    <li><i class="fas fa-check-circle"></i> Career Counseling</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="curriculum">
+    <div class="pg-container">
+        
+        <div class="curriculum__header" data-aos="fade-up">
+            <span class="curriculum__tag">Our Programs</span>
+            <h2 class="curriculum__title">CLASSES <span>OFFERED</span></h2>
+            <p class="curriculum__subtitle">
+                Comprehensive grade-wise structure designed for academic excellence.
+            </p>
+        </div>
+
+        <div class="curriculum__grid">
+
+            <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="program-card__icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="program-card__title">Primary Wing</h3>
+                <p class="program-card__text">
+                    Foundational years focusing on core concepts and creative development.
+                </p>
+                <ul class="program-card__features">
+                    <li><i class="fas fa-check-circle"></i> Grade-wise structure</li>
+                    <li><i class="fas fa-check-circle"></i> Interactive Learning</li>
+                </ul>
+            </div>
+
+            <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="program-card__icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3 class="program-card__title">Middle School</h3>
+                <p class="program-card__text">
+                    Developing analytical skills and broadening subject knowledge.
+                </p>
+                <ul class="program-card__features">
+                    <li><i class="fas fa-check-circle"></i> Advanced Curriculum</li>
+                    <li><i class="fas fa-check-circle"></i> Skill Workshops</li>
+                </ul>
+            </div>
+
+            <div class="program-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="program-card__icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3 class="program-card__title">Secondary Wing</h3>
+                <p class="program-card__text">
+                    Preparing students for higher education and competitive exams.
+                </p>
+                <ul class="program-card__features">
+                    <li><i class="fas fa-check-circle"></i> Specialized Labs</li>
+                    <li><i class="fas fa-check-circle"></i> Career Guidance</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="acs-approach-wrapper">
+    <div class="acs-container">
+        <div class="acs-header" data-aos="fade-down">
+            <h2 class="acs-title">TEACHING <span>APPROACH</span></h2>
+            <div class="acs-underline"></div>
+            <p class="acs-subtitle">Our unique methodology focuses on the holistic development and academic excellence of every student.</p>
+        </div>
+
+        <div class="acs-grid">
+            <div class="acs-approach-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="approach-icon-wrap">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3 class="acs-card-title">Teaching Methodology</h3>
+                <p class="acs-card-text">We implement a student-centric approach that simplifies complex concepts through practical understanding.</p>
+                
+                <ul class="acs-tick-list">
+                    <li><i class="fas fa-check-double"></i> Concept-Based Learning</li>
+                    <li><i class="fas fa-check-double"></i> Interactive Classroom Sessions</li>
+                    <li><i class="fas fa-check-double"></i> Real-world Application Case Studies</li>
+                </ul>
+            </div>
+
+            <div class="acs-approach-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="approach-icon-wrap">
+                    <i class="fas fa-users-gear"></i>
+                </div>
+                <h3 class="acs-card-title">Skill Empowerment</h3>
+                <p class="acs-card-text">Beyond textbooks, we focus on equipping students with essential life and technical skills for the future.</p>
+                
+                <ul class="acs-tick-list">
+                    <li><i class="fas fa-check-double"></i> Advanced Communication Training</li>
+                    <li><i class="fas fa-check-double"></i> Critical Problem Solving</li>
+                    <li><i class="fas fa-check-double"></i> Leadership & Team Collaboration</li>
+                </ul>
+            </div>
+
+            <div class="acs-approach-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="approach-icon-wrap">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3 class="acs-card-title">Academic Excellence</h3>
+                <p class="acs-card-text">Continuous monitoring and personalized attention ensure that every student reaches their full potential.</p>
+                
+                <ul class="acs-tick-list">
+                    <li><i class="fas fa-check-double"></i> Personalized Performance Feedback</li>
+                    <li><i class="fas fa-check-double"></i> Regular Progress Assessments</li>
+                    <li><i class="fas fa-check-double"></i> One-on-One Expert Mentorship</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

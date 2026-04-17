@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Website</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header>
+  
+  <div class="nav-container">
+
+    <div class="nav">
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="School Logo">
+        </a>
+      </div>
+
+      <!-- MENU ICON -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- NAV LINKS (desktop) -->
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+  <!-- JS -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    disableMutationObserver: false,
+    debounceDelay: 50,
+    throttleDelay: 99,
+    offset: 120,
+    once: true, // Animation okkasari ayyaka aagipothundhi, scroll issue thagguthundhi
+    disable: 'mobile' // Mobile lo animations valla scroll osthe idhi use cheyandi
+  });
+</script>
+
+
+
+
+
+
+
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>My School</h1>
+    <p>Empowering Students for a Bright Future</p>
+
+    <div class="hero-buttons">
+      <a href="contact.html" class="btn primary">Apply Now</a>
+      <a href="contact.html" class="btn secondary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+  <section class="highlights">
+
+    <span class="highlights-eyebrow">What Makes Us Different</span>
+    <h2>INSTITUTIONAL<span> HIGHLIGHTS</span></h2>
+    <p class="highlight-sub">
+      Defining excellence through modern infrastructure and dedicated mentorship.
+    </p>
+
+    <div class="highlight-container">
+
+      <div class="card">
+        <span class="card-num">01</span>
+        <div class="card-icon"><i class="ri-user-follow-line"></i></div>
+        <h3>Admissions Open</h3>
+        <p>Begin your journey today. Apply now to secure your seat for the upcoming session.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">02</span>
+        <div class="card-icon"><i class="ri-medal-line"></i></div>
+        <h3>Expert Faculty</h3>
+        <p>Guidance from award-winning educators focused on practical learning outcomes.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">03</span>
+        <div class="card-icon"><i class="ri-book-2-line"></i></div>
+        <h3>Modern Curriculum</h3>
+        <p>Stay ahead with a syllabus designed for the demands of the modern global industry.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-num">04</span>
+        <div class="card-icon"><i class="ri-shield-user-line"></i></div>
+        <h3>Safe Campus</h3>
+        <p>A protected environment with 24/7 security ensuring peace of mind for everyone.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+<section class="about-section">
+  <div class="about-container">
+    
+    <div class="about-image-box">
+      <img src="https://img.freepik.com/free-vector/large-school-building-scene_1308-32058.jpg?semt=ais_hybrid&w=740&q=80" alt="School Building">
+      <div class="exp-badge">
+        <h3>25+</h3>
+        <p>Years of Excellence</p>
+      </div>
+    </div>
+
+    <div class="about-content-box">
+      <span class="top-tagline">EMPOWERING THE FUTURE</span>
+      <h2>Nurturing Excellence Through <span>Modern Education</span></h2>
+      
+      <p class="desc">
+        Our institution is dedicated to nurturing young minds through quality education, 
+        innovative teaching methods, and a supportive learning environment.
+      </p>
+
+      <ul class="features">
+        <li><i class="fas fa-chalkboard-teacher"></i> Expert Faculty & Mentors</li>
+        <li><i class="fas fa-school"></i> State-of-the-art Infrastructure</li>
+        <li><i class="fas fa-graduation-cap"></i> Holistic Development Programs</li>
+      </ul>
+      <a href="about.html" class="about-btn">
+        Discover More <span class="symbol">&rarr;</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="features-section">
+    <div class="features-container">
+        <h2 class="main-title" data-aos="fade-down">WHY CHOOSE OUR SCHOOL?</h2>
+
+        <div class="features-grid">
+            
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-header">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Qualified Teachers</h3>
+                </div>
+                <ul class="points-list">
+                    <li>Highly experienced faculty</li>
+                    <li>Subject matter experts</li>
+                    <li>Regular faculty training</li>
+                    <li>Child-centric teaching</li>
+                    <li>Mentorship programs</li>
+                    <li>Innovative pedagogy</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-header">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Student Focused Learning</h3>
+                </div>
+                <ul class="points-list">
+                    <li>Personalized attention</li>
+                    <li>Interactive smart classes</li>
+                    <li>Remedial coaching classes</li>
+                    <li>Skill-based curriculum</li>
+                    <li>Adaptive learning tools</li>
+                    <li>Practical experiments</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-header">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Discipline & Values</h3>
+                </div>
+                <ul class="points-list">
+                    <li>Ethical value education</li>
+                    <li>Strict discipline policy</li>
+                    <li>Character building focus</li>
+                    <li>Social responsibility</li>
+                    <li>Respect & Integrity</li>
+                    <li>Leadership qualities</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-header">
+                    <i class="fas fa-swimmer"></i>
+                    <h3>Co-curricular Balance</h3>
+                </div>
+                <ul class="points-list">
+                    <li>State-level sports</li>
+                    <li>Music, Dance & Drama</li>
+                    <li>Creative arts & crafts</li>
+                    <li>Yoga & Physical fitness</li>
+                    <li>Public speaking/Debates</li>
+                    <li>Inter-school competitions</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="academics-premium">
+  <div class="containr">
+    <div class="header-group">
+      <div class="badge-container">
+        <span class="sub-label">Academic Excellence</span>
+      </div>
+      <h2 class="section-title">Educational Pathways</h2>
+      <div class="title-underline"></div>
+      <p class="section-subtitle">A global curriculum designed to nurture critical thinking, creativity, and leadership across every developmental stage.</p>
+    </div>
+
+    <div class="academics-bento">
+      <div class="academic-card">
+        <div class="card-inner">
+          <div class="card-header">
+            <div class="icon-wrapper"><i class="fas fa-seedling"></i></div>
+            <span class="grade-pill">Grades 1-5</span>
+          </div>
+          <h3>Primary School</h3>
+          <p>Nurturing curiosity through a balanced curriculum of core literacy and creative exploration.</p>
+          <div class="card-footer">
+            <a href="academics.html" class="learn-btn-premium">Learn More <span><i class="fas fa-arrow-right"></i></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="academic-card">
+        <div class="card-inner">
+          <div class="card-header">
+            <div class="icon-wrapper"><i class="fas fa-book-reader"></i></div>
+            <span class="grade-pill">Grades 6-10</span>
+          </div>
+          <h3>Secondary School</h3>
+          <p>Fostering academic rigor as students delve deeper into specialized subjects and research.</p>
+          <div class="card-footer">
+            <a href="academics.html" class="learn-btn-premium">Learn More <span><i class="fas fa-arrow-right"></i></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="academic-card">
+        <div class="card-inner">
+          <div class="card-header">
+            <div class="icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
+            <span class="grade-pill">Grades 11-12</span>
+          </div>
+          <h3>Higher Secondary</h3>
+          <p>Advanced pre-university training ensuring success in global university admissions.</p>
+          <div class="card-footer">
+            <a href="academics.html" class="learn-btn-premium">Learn More <span><i class="fas fa-arrow-right"></i></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="admission-section">
+    <div class="admission-container">
+        
+        <div class="admission-header" data-aos="zoom-in">
+            <span class="badge">Enroll Now</span>
+             <h2> ADMISSIONS OPEN FOR <span id="academic-year"></span></h2>
+            <p>Join our community of learners and achievers. Start your journey today!</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-number">01</div>
+                <i class="fas fa-file-signature"></i>
+                <h3>Fill Form</h3>
+                <p>Submit the online enquiry form with basic details.</p>
+            </div>
+
+            <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-number">02</div>
+                <i class="fas fa-comments"></i>
+                <h3>Counseling</h3>
+                <p>Attend a brief interaction or campus tour with us.</p>
+            </div>
+
+            <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-number">03</div>
+                <i class="fas fa-user-check"></i>
+                <h3>Confirm</h3>
+                <p>Complete the documentation and secure the seat.</p>
+            </div>
+        </div>
+
+        <div class="admission-footer" data-aos="fade-up">
+            <a href="admissions.html" class="apply-btn">Apply Now &rarr;</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const now = new Date();
+  let year = now.getFullYear();
+  let startYear = (now.getMonth() >= 3) ? year : year - 1;
+  let endYear = startYear + 1;
+  const yearElement = document.getElementById("academic-year");
+  if(yearElement) {
+    yearElement.innerText = `${startYear}-${endYear.toString().slice(-2)}`;
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="testimonials-premium-section">
+    <div class="tp-shape tp-shape-1"></div>
+    <div class="tp-shape tp-shape-2"></div>
+
+    <div class="tp-container">
+        <div class="tp-header" data-aos="fade-up">
+            <span class="tp-sub-label">TESTIMONIALS</span>
+            <h2 class="tp-main-title">What Our Community <span>Says</span></h2>
+            <p class="tp-desc">Hear directly from the parents and students who are part of our transformative journey.</p>
+        </div>
+
+        <div class="tp-grid">
+            
+            <div class="tp-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="tp-card-inner">
+                    <div class="tp-quote-top"><i class="fas fa-quote-right"></i></div>
+                    <div class="tp-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="tp-review">"The teaching methods are excellent. My son has improved significantly in his academics and social skills. Highly recommend this school!"</p>
+                    
+                    <div class="tp-user">
+                        <div class="tp-user-img">
+                            <img src="https://i.pravatar.cc/100?u=1" alt="Parent">
+                        </div>
+                        <div class="tp-user-meta">
+                            <h4>Ravi Kumar</h4>
+                            <p>Global Parent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tp-card active-highlight" data-aos="fade-up" data-aos-delay="200">
+                <div class="tp-card-inner">
+                    <div class="tp-quote-top"><i class="fas fa-quote-right"></i></div>
+                    <div class="tp-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="tp-review">"As a student, I love the environment here. The teachers are very supportive, and the sports facilities are top-notch."</p>
+                    
+                    <div class="tp-user">
+                        <div class="tp-user-img">
+                            <img src="https://i.pravatar.cc/100?u=2" alt="Student">
+                        </div>
+                        <div class="tp-user-meta">
+                            <h4>Sruthi Reddy</h4>
+                            <p>Class 10 Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tp-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="tp-card-inner">
+                    <div class="tp-quote-top"><i class="fas fa-quote-right"></i></div>
+                    <div class="tp-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="tp-review">"The focus on discipline and values along with education is what makes this school stand out from others in the city."</p>
+                    
+                    <div class="tp-user">
+                        <div class="tp-user-img">
+                            <img src="https://i.pravatar.cc/100?u=3" alt="Parent">
+                        </div>
+                        <div class="tp-user-meta">
+                            <h4>Anil Verma</h4>
+                            <p>Parent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-strip" data-aos="fade-up">
+    <div class="strip-container">
+        
+        <div class="contact-item">
+            <div class="icon-circle">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-info">
+                <span>Call Us</span>
+                <p>+91 00000 00000</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="icon-circle">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info">
+                <span>Email Us</span>
+                <p>info@yourschool.com</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="icon-circle">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-info">
+                <span>Visit Us</span>
+                <p>My School , Hyderabad, TS</p>
+            </div>
+        </div>
+
+        <div class="contact-cta">
+            <a href="contact.html" class="cta-btn">Start Your Admission <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="main-footer" data-aos="fade-up">
+    <div class="footer-container">
+        
+        <div class="footer-col" data-aos="fade-right" data-aos-delay="100">
+            <h3>Our School</h3>
+            <p>Empowering students through quality education, character building, and holistic development since 1995.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" data-aos="fade-left" data-aos-delay="300">
+            <h3>Get In Touch</h3>
+            <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>MY School, Hyderabad, TS</p>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+                <p>+91 900000 0000</p>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <p>info@yourschool.com</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 MY School. All Rights Reserved.</p>
+    </div>
+</footer>

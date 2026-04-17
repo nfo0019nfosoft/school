@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Website</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+ <header>
+  
+  <div class="nav-container">
+
+    <div class="nav">
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="School Logo">
+        </a>
+      </div>
+
+      <!-- MENU ICON -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- NAV LINKS (desktop) -->
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+  <!-- JS -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero-page" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070');">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-container" data-aos="fade-up">
+        <span class="hero-badge">Quality Education</span>
+        
+        <h1 class="hero-title">CONTACT US</h1>
+        
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="arrow-icon"><i class="ri-arrow-right-double-line"></i></span>
+            <span class="current-page">Contact Us</span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-section" id="contact">
+    <div class="admission-container">
+        
+        <div class="header-main" data-aos="fade-down">
+            <span class="badge-accent">Get In Touch</span>
+            <h2 class="section-title">CONTACT <span> INFORMATION</span></h2>
+            <p>Reach out to us for any queries or visit our campus.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-icon">
+                    <i class="ri-map-pin-2-fill"></i>
+                </div>
+                <h3>Our Address</h3>
+                <p>123 Education Lane, Kothagudem, Telangana, India.</p>
+            </div>
+
+            <div class="contact-info-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-icon">
+                    <i class="ri-phone-fill"></i>
+                </div>
+                <h3>Phone Number</h3>
+                <p>+91 80745 86016</p>
+            </div>
+
+            <div class="contact-info-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="contact-icon">
+                    <i class="ri-mail-open-fill"></i>
+                </div>
+                <h3>Email Address</h3>
+                <p>info@schoolname.com</p>
+            </div>
+        </div>
+
+        <div class="map-wrapper" data-aos="zoom-in">
+            <h2 class="section-title small-title">FIND <span>US HERE </span></h2>
+            <div class="map-frame">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60633.95754964263!2d80.589882!3d17.514697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a34076326c92d6d%3A0xc3f8e581e1e4859a!2sKothagudem%2C%20Telangana!5e0!3m2!1sen!2sin!4v1713000000000!5m2!1sen!2sin" 
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="enquiry-section" id="enquiry">
+    <div class="admission-container">
+        
+        <div class="header-main" data-aos="fade-down">
+            <span class="badge-accent">Contact Us</span>
+            <h2> Enquiry <span>Form</span></h2>
+            <p>Your details are safe with us. Just fill and send!</p>
+        </div>
+
+        <div class="enquiry-card" data-aos="zoom-in">
+            <div class="form-visual">
+                <div class="circle-blur"></div>
+            </div>
+            
+            <form id="whatsappForm" class="enquiry-form">
+                
+                <div class="input-wrapper">
+                    <label>Full Name</label>
+                    <div class="field">
+                        <i class="ri-user-smile-fill icon-main"></i>
+                        <input type="text" id="name" placeholder="Ex: Rahul Kumar" required>
+                        <i class="ri-checkbox-circle-fill check-icon"></i>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Phone Number</label>
+                    <div class="field">
+                        <i class="ri-whatsapp-fill icon-main"></i>
+                        <input type="tel" id="phone" placeholder="+91 00000 00000" required>
+                        <i class="ri-checkbox-circle-fill check-icon"></i>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Email Address</label>
+                    <div class="field">
+                        <i class="ri-mail-send-fill icon-main"></i>
+                        <input type="email" id="email" placeholder="example@mail.com" required>
+                        <i class="ri-checkbox-circle-fill check-icon"></i>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Your Message</label>
+                    <div class="field">
+                        <i class="ri-chat-voice-fill icon-main"></i>
+                        <textarea id="message" rows="3" placeholder="Tell us about your requirement..." required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="fancy-submit">
+                    <span class="btn-text">Send on WhatsApp</span>
+                    <div class="btn-icon">
+                        <i class="ri-send-plane-fill"></i>
+                    </div>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<script>
+  document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Page refresh avvakunda stop chestundi
+
+    // Get Form Values
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Your WhatsApp Number
+    const myNumber = "918074586016"; // 91 is India code
+
+    // Format the Message
+    const encodedMessage = encodeURIComponent(
+        `*New Admission Enquiry*\n\n` +
+        `*Name:* ${name}\n` +
+        `*Phone:* ${phone}\n` +
+        `*Email:* ${email}\n` +
+        `*Message:* ${message}`
+    );
+
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${myNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+});
+</script>

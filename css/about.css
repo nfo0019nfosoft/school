@@ -1,0 +1,776 @@
+
+
+:root {
+  --primary: #0d1b2a;
+  --secondary: #1b263b;
+  --accent: #00b4d8;
+  --light: #f8f9fa;
+  --text-gray: #555;
+   --text-main: #333;
+  --text-muted: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+html, body {
+ 
+  background: var(--light);
+}
+
+/* HEADER */
+header {
+  background: var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+}
+.nav-container {
+  max-width: 1200px;   /* ✅ control width */
+  margin: 0 auto;      /* ✅ center horizontally */
+  padding: 0 20px;     /* ✅ spacing on sides */
+  width: 100%;
+  position: relative;
+}
+/* LOGO IMAGE */
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 35px; /* ✅ proper spacing */
+}
+
+/* LINKS */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  padding: 5px 0;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* MENU ICON */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: var(--primary);
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+    padding: 20px 0;
+
+    display: none;
+
+    margin: 0;
+    border: none; /* ✅ REMOVE LINE */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   HERO SECTION - CORE STYLES
+   ========================================= */
+.hero-page {
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Dark Overlay for Text Clarity */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* 1. PROFESSIONAL BADGE */
+.hero-badge {
+    display: inline-block;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. WHITE COLOR TITLES */
+.hero-title {
+    font-size: 60px;
+    font-weight: 800;
+    color: #ffffff; /* Total White color */
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.hero-title span {
+    color: var(--accent); /* Only one word highlight (Cyan/Blue) */
+}
+
+/* 3. BREADCRUMB & ARROW CSS */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.8); /* Semi-white */
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #ffffff;
+}
+
+.arrow-icon {
+    color: var(--accent); /* Arrow color */
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.current-page {
+    color: #ffffff; /* Current page name is Pure White */
+    font-weight: 700;
+    opacity: 1;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE CSS
+   ========================================= */
+@media (max-width: 768px) {
+    .hero-page {
+        height: 350px; /* Reduced height for mobile */
+    }
+
+    .hero-title {
+        font-size: 36px; /* Smaller font for mobile */
+    }
+
+    .hero-badge {
+        font-size: 11px;
+        padding: 5px 15px;
+        margin-bottom: 15px;
+    }
+
+    .breadcrumb {
+        gap: 8px;
+    }
+
+    .breadcrumb a, .current-page {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-page {
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Section Base */
+.about-modern {
+    padding: 50px 5%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TOP FLEX LAYOUT */
+.about-flex-top {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.about-img-container {
+    flex: 1;
+    position: relative;
+}
+
+.about-img-container img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.experience-badge {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--accent);
+}
+
+.experience-badge h3 { font-size: 30px; color: var(--primary); margin: 0; }
+.experience-badge p { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; }
+
+.about-text-container { flex: 1; }
+.tagline { color: var(--accent); font-weight: 800; font-size: 14px; letter-spacing: 2px; }
+.about-text-container h2 { font-size: 35px; color: var(--primary); line-height: 1.2; margin: 20px 0; }
+.about-text-container h2 span { color: var(--accent); }
+.description { color: var(--text-gray); line-height: 1.8; margin-bottom: 35px; text-align: justify; }
+
+
+
+/* BOTTOM GRID CARDS */
+.about-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background: var(--light);
+    padding: 40px 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.feature-card h4 {
+    font-size: 19px;
+    color: var(--primary);
+    margin-bottom: 12px;
+    transition: 0.4s;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    transition: 0.4s;
+}
+
+/* --- HOVER EFFECT: CARD CHANGES TO PRIMARY --- */
+.feature-card:hover {
+    background-color: var(--primary);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(13, 27, 42, 0.3);
+}
+
+.feature-card:hover .card-icon,
+.feature-card:hover h4,
+.feature-card:hover p {
+    color: #ffffff; /* మౌస్ పెట్టగానే అంతా వైట్ అవుతుంది */
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 992px) {
+    .about-flex-top { flex-direction: column; text-align: center; }
+    .about-features-grid { grid-template-columns: repeat(2, 1fr); }
+    .experience-badge { right: 10px; }
+}
+
+@media (max-width: 600px) {
+    .about-features-grid { grid-template-columns: 1fr; }
+    .about-text-container h2 { font-size: 32px; }
+    .about-img-container img { height: 300px; }
+}
+
+
+
+
+
+
+
+
+
+/* Unique Wrapper for the whole section */
+.vms-area-wrapper {
+    padding: 50px 0;
+     background: var(--light);
+    font-family: 'Poppins', sans-serif; /* Nee font name ikkada ivvu */
+}
+
+.vms-custom-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header Section --- */
+.vms-main-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.vms-sub-label {
+    display: block;
+    color: var(--accent, #e67e22); /* Default orange if var not found */
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.vms-title-text {
+    font-size: clamp(28px, 5vw, 42px);
+    color: var(--primary, #2c3e50);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.vms-title-text span {
+    color: var(--accent, #e67e22);
+}
+
+/* Animated Line */
+.vms-animated-line-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.vms-track-line {
+    width: 80px;
+    height: 3px;
+    background: #eee;
+    position: relative;
+    border-radius: 10px;
+}
+
+.vms-moving-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--accent, #e67e22);
+    border-radius: 50%;
+    top: -3.5px;
+    left: 0;
+    animation: vmsDotMove 3s linear infinite;
+}
+
+@keyframes vmsDotMove {
+    0% { left: 0; }
+    50% { left: 100%; transform: translateX(-10px); }
+    100% { left: 0; }
+}
+
+/* --- Grid & Cards --- */
+.vms-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.vms-creative-card {
+    background: #ffffff;
+    padding: 50px 35px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid #f1f1f1;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.vms-top-border-grow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 5px;
+    background: var(--accent, #e67e22);
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.vms-creative-card:hover .vms-top-border-grow {
+    width: 100%;
+}
+
+.vms-card-icon {
+    font-size: 40px;
+    color: var(--primary, #2c3e50);
+    margin-bottom: 20px;
+    transition: 0.4s ease;
+}
+
+.vms-creative-card:hover .vms-card-icon {
+    color: var(--accent, #e67e22);
+    transform: scale(1.1) translateY(-5px);
+}
+
+.vms-card-title {
+    font-size: 24px;
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.vms-card-desc {
+    color: #666;
+    line-height: 1.7;
+    text-align: justify;
+    font-size: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Watermark Number */
+.vms-watermark-num {
+    position: absolute;
+    bottom: -15px;
+    right: 10px;
+    font-size: 90px;
+    font-weight: 900;
+    color: rgba(0,0,0,0.03);
+    z-index: 0;
+    user-select: none;
+}
+
+/* Hover State for Card */
+.vms-creative-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    border-color: transparent;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .vms-area-wrapper {
+        padding: 50px 0;
+    }
+    .vms-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Principal Message Section Styles --- */
+.pms-section-wrapper {
+    padding: 50px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.pms-custom-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pms-flex-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* --- Image Column Styles --- */
+.pms-image-col {
+    flex: 1;
+    min-width: 350px;
+    position: relative;
+}
+
+.pms-img-frame {
+    position: relative;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.pms-img-frame:hover {
+    transform: scale(1.02);
+}
+
+.pms-main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Floating Badge */
+.pms-experience-badge {
+    position: absolute;
+    bottom: 40px;
+    right: -20px;
+    background: var(--accent, #e67e22);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.3);
+    animation: pmsFloat 3s ease-in-out infinite;
+}
+
+@keyframes pmsFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.pms-exp-num {
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.pms-exp-txt {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* --- Content Column Styles --- */
+.pms-content-col {
+    flex: 1.2;
+    min-width: 350px;
+}
+
+.pms-lead-label {
+    color: var(--accent, #e67e22);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pms-main-title {
+    font-size: clamp(26px, 4vw, 38px);
+    color: var(--primary, #2c3e50);
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.pms-main-title span {
+    color: var(--accent, #e67e22);
+}
+
+.pms-message-box {
+    position: relative;
+    padding-left: 30px;
+    border-left: 4px solid #eee;
+    margin-bottom: 30px;
+}
+
+.pms-quote-icon {
+    font-size: 30px;
+    color: #eee;
+    margin-bottom: 15px;
+}
+
+.pms-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Signature & Meta */
+.pms-signature-area {
+    margin-top: 30px;
+}
+
+.pms-name {
+    font-size: 22px;
+    color: var(--primary, #2c3e50);
+    font-weight: 700;
+    margin: 0;
+}
+
+.pms-designation {
+    font-size: 14px;
+    color: #888;
+    margin: 5px 0 15px 0;
+}
+
+.pms-social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #f4f4f4;
+    color: var(--primary, #2c3e50);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.pms-social-links a:hover {
+    background: var(--accent, #e67e22);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+    .pms-flex-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .pms-image-col {
+        max-width: 500px;
+    }
+    .pms-experience-badge {
+        right: 20px;
+    }
+}

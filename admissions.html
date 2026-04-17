@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Website</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/admissions.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+  
+  <div class="nav-container">
+
+    <div class="nav">
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="School Logo">
+        </a>
+      </div>
+
+      <!-- MENU ICON -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- NAV LINKS (desktop) -->
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+  <!-- JS -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+
+
+
+
+
+<section class="hero-page" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070');">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-container" data-aos="fade-up">
+        <span class="hero-badge">Quality Education</span>
+        
+        <h1 class="hero-title">ADMISSIONS</h1>
+        
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="arrow-icon"><i class="ri-arrow-right-double-line"></i></span>
+            <span class="current-page">Admissions</span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="admission-section">
+    <div class="admission-container">
+        
+        <div class="admission-header" data-aos="zoom-in">
+            <span class="badge">Enroll Now</span>
+             <h2> Admissions Open for <span id="academic-year"></span></h2>
+            <p>Join our community of learners and achievers. Start your journey today!</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-number">01</div>
+                <i class="fas fa-file-signature"></i>
+                <h3>Fill Form</h3>
+                <p>Submit the online enquiry form with basic details.</p>
+            </div>
+
+            <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-number">02</div>
+                <i class="fas fa-comments"></i>
+                <h3>Counseling</h3>
+                <p>Attend a brief interaction or campus tour with us.</p>
+            </div>
+
+            <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-number">03</div>
+                <i class="fas fa-user-check"></i>
+                <h3>Confirm</h3>
+                <p>Complete the documentation and secure the seat.</p>
+            </div>
+        </div>
+
+        <div class="admission-footer" data-aos="fade-up">
+          
+        </div>
+
+    </div>
+</section>
+
+<script>
+  const now = new Date();
+  let year = now.getFullYear();
+
+  // If after March → next academic year start
+  let startYear = (now.getMonth() >= 3) ? year : year - 1;
+  let endYear = startYear + 1;
+
+  document.getElementById("academic-year").innerText = `${startYear}-${endYear.toString().slice(-2)}`;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="eligibility-detailed">
+    <div class="admission-container">
+       <div class="header-main" data-aos="fade-down">
+    <span class="badge-accent">Detailed Guidelines</span>
+    <h2> Eligibility <span>Criteria</span></h2>
+    <p>Please review the following age and academic requirements for a smooth admission process.</p>
+</div>
+
+        <div class="vertical-flow">
+            
+            <div class="detail-card" data-aos="fade-left" data-aos-delay="100">
+                <div class="detail-icon">01</div>
+                <div class="detail-text">
+                    <h3>Pre-Primary (Nursery, LKG, UKG)</h3>
+                    <p>Children must meet the minimum age requirement of 3 years for Nursery as of June 1st. No written entrance test is required for these levels. Admission is granted based on a friendly interaction session with the child and parents to understand the child's readiness and development milestones.</p>
+                    <span class="criteria-tag">Age: 3+ to 5+ Years</span>
+                </div>
+            </div>
+
+            <div class="detail-card" data-aos="fade-left" data-aos-delay="200">
+                <div class="detail-icon">02</div>
+                <div class="detail-text">
+                    <h3>Primary School (Grade 1 to 5)</h3>
+                    <p>Students seeking admission in Primary grades must provide a Transfer Certificate (TC) and a progress report from their previous recognized school. A basic competency assessment in English and Mathematics will be conducted to ensure the student is placed in the most suitable academic environment.</p>
+                    <span class="criteria-tag">Assessment Required</span>
+                </div>
+            </div>
+
+            <div class="detail-card" data-aos="fade-left" data-aos-delay="300">
+                <div class="detail-icon">03</div>
+                <div class="detail-text">
+                    <h3>Secondary School (Grade 6 to 10)</h3>
+                    <p>Admission is strictly based on academic performance and a formal entrance examination. Candidates must have successfully completed the previous grade from a recognized board (CBSE/ICSE/State). Original documents, including Birth Certificate and Aadhaar, must be submitted at the time of confirmation.</p>
+                    <span class="criteria-tag">Merit Based Admission</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="enquiry-section" id="enquiry">
+    <div class="admission-container">
+        
+        <div class="header-main" data-aos="fade-down">
+            <span class="badge-accent">Contact Us</span>
+            <h2> Enquiry <span>Form</span></h2>
+            <p>Your details are safe with us. Just fill and send!</p>
+        </div>
+
+        <div class="enquiry-card" data-aos="zoom-in">
+            <div class="form-visual">
+                <div class="circle-blur"></div>
+            </div>
+            
+            <form id="whatsappForm" class="enquiry-form">
+                
+                <div class="input-wrapper">
+                    <label>Full Name</label>
+                    <div class="field">
+                        <i class="ri-user-smile-fill icon-main"></i>
+                        <input type="text" id="name" placeholder="Ex: Rahul Kumar" required>
+                        <i class="ri-checkbox-circle-fill check-icon"></i>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Phone Number</label>
+                    <div class="field">
+                        <i class="ri-whatsapp-fill icon-main"></i>
+                        <input type="tel" id="phone" placeholder="+91 00000 00000" required>
+                        <i class="ri-checkbox-circle-fill check-icon"></i>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Email Address</label>
+                    <div class="field">
+                        <i class="ri-mail-send-fill icon-main"></i>
+                        <input type="email" id="email" placeholder="example@mail.com" required>
+                        <i class="ri-checkbox-circle-fill check-icon"></i>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Your Message</label>
+                    <div class="field">
+                        <i class="ri-chat-voice-fill icon-main"></i>
+                        <textarea id="message" rows="3" placeholder="Tell us about your requirement..." required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="fancy-submit">
+                    <span class="btn-text">Send on WhatsApp</span>
+                    <div class="btn-icon">
+                        <i class="ri-send-plane-fill"></i>
+                    </div>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<script>
+  document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Page refresh avvakunda stop chestundi
+
+    // Get Form Values
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Your WhatsApp Number
+    const myNumber = "918074586016"; // 91 is India code
+
+    // Format the Message
+    const encodedMessage = encodeURIComponent(
+        `*New Admission Enquiry*\n\n` +
+        `*Name:* ${name}\n` +
+        `*Phone:* ${phone}\n` +
+        `*Email:* ${email}\n` +
+        `*Message:* ${message}`
+    );
+
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${myNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+});
+</script>

@@ -1,0 +1,835 @@
+
+
+:root {
+  --primary: #0d1b2a;
+  --secondary: #1b263b;
+  --accent: #00b4d8;
+  --light: #f8f9fa;
+  --text-gray: #555;
+   --text-main: #333;
+  --text-muted: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+html, body {
+ 
+  background: var(--light);
+}
+
+/* HEADER */
+header {
+  background: var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+}
+.nav-container {
+  max-width: 1200px;   /* ✅ control width */
+  margin: 0 auto;      /* ✅ center horizontally */
+  padding: 0 20px;     /* ✅ spacing on sides */
+  width: 100%;
+  position: relative;
+}
+/* LOGO IMAGE */
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 35px; /* ✅ proper spacing */
+}
+
+/* LINKS */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  padding: 5px 0;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* MENU ICON */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: var(--primary);
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+    padding: 20px 0;
+
+    display: none;
+
+    margin: 0;
+    border: none; /* ✅ REMOVE LINE */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   HERO SECTION - CORE STYLES
+   ========================================= */
+.hero-page {
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Dark Overlay for Text Clarity */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* 1. PROFESSIONAL BADGE */
+.hero-badge {
+    display: inline-block;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. WHITE COLOR TITLES */
+.hero-title {
+    font-size: 60px;
+    font-weight: 800;
+    color: #ffffff; /* Total White color */
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.hero-title span {
+    color: var(--accent); /* Only one word highlight (Cyan/Blue) */
+}
+
+/* 3. BREADCRUMB & ARROW CSS */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.8); /* Semi-white */
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #ffffff;
+}
+
+.arrow-icon {
+    color: var(--accent); /* Arrow color */
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.current-page {
+    color: #ffffff; /* Current page name is Pure White */
+    font-weight: 700;
+    opacity: 1;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE CSS
+   ========================================= */
+@media (max-width: 768px) {
+    .hero-page {
+        height: 350px; /* Reduced height for mobile */
+    }
+
+    .hero-title {
+        font-size: 36px; /* Smaller font for mobile */
+    }
+
+    .hero-badge {
+        font-size: 11px;
+        padding: 5px 15px;
+        margin-bottom: 15px;
+    }
+
+    .breadcrumb {
+        gap: 8px;
+    }
+
+    .breadcrumb a, .current-page {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-page {
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Wrapper */
+.acs-curriculum-wrapper {
+    padding: 50px 5%;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.acs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.acs-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.acs-tag {
+    color: var(--accent, #e67e22);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.acs-title {
+    font-size: clamp(28px, 5vw, 40px);
+    color: var(--primary, #2c3e50);
+    font-weight: 800;
+}
+
+.acs-title span {
+    color: var(--accent, #e67e22);
+}
+
+.acs-subtitle {
+    color: #777;
+    max-width: 600px;
+    margin: 15px auto 0;
+}
+
+/* Grid Layout */
+.acs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Card Styles */
+.acs-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: left;
+    transition: all 0.4s ease;
+    border: 1.5px solid #eee;
+    position: relative;
+    z-index: 1;
+}
+
+/* Icon Animation */
+.acs-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #fff4ec; /* Light accent background */
+    color: var(--accent, #e67e22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    transition: 0.5s ease;
+}
+
+.acs-card:hover .acs-icon-box {
+    background: var(--accent, #e67e22);
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+.acs-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary, #2c3e50);
+    margin-bottom: 15px;
+}
+
+.acs-card-text {
+    color: #666;
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.acs-features {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.acs-features li {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.acs-features li i {
+    color: var(--accent, #e67e22);
+    font-size: 16px;
+}
+
+/* Hover Effects */
+.acs-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+    border-color: var(--accent, #e67e22);
+}
+
+/* --- Mobile & Tablet Responsive --- */
+@media (max-width: 992px) {
+    .acs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+
+    .acs-curriculum-wrapper {
+        padding: 40px 20px;
+    }
+
+    /* ===== HEADER FIX ===== */
+    .acs-header {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .acs-title {
+        font-size: 22px;
+        white-space: nowrap;   /* ✅ MAIN FIX (1 line) */
+        overflow: hidden;
+        text-overflow: ellipsis; /* optional safety */
+    }
+
+    .acs-subtitle {
+        margin-left: 0;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .acs-tag {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    /* ===== GRID ===== */
+    .acs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* ===== CARD ===== */
+    .acs-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .acs-icon-box {
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .acs-card-title {
+        font-size: 18px;
+    }
+
+    .acs-card-text {
+        font-size: 14px;
+    }
+
+    .acs-features li {
+        font-size: 14px;
+    }
+
+    /* ===== PERFORMANCE (remove heavy hover on mobile) ===== */
+    .acs-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .acs-card:hover .acs-icon-box {
+        transform: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== CONTAINER ===== */
+.pg-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== SECTION ===== */
+.curriculum {
+    padding: 50px 5%;
+    background: #f8f9fa;
+}
+
+/* ===== HEADER ===== */
+.curriculum__header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.curriculum__tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.curriculum__title {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+.curriculum__title span {
+    color: var(--accent);
+}
+
+.curriculum__subtitle {
+    max-width: 600px;
+    margin: 15px auto 0;
+    font-size: 16px;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* ===== GRID ===== */
+.curriculum__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ===== CARD ===== */
+.program-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+
+    transition: all 0.3s ease;
+}
+
+.program-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent);
+}
+
+/* ===== ICON ===== */
+.program-card__icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+
+    transform: scale(1.05);
+}
+
+/* ===== TEXT ===== */
+.program-card__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.program-card__text {
+    color: var(--text-gray);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.program-card__features {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+.program-card__features li {
+    font-size: 14px;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+.program-card__features li i {
+    color: var(--accent);
+}
+
+/* ===== HOVER ===== */
+.program-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.program-card:hover .program-card__icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .curriculum__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .curriculum {
+        padding: 40px 20px;
+    }
+
+    .curriculum__header {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .curriculum__title {
+        font-size: 28px;
+    }
+
+    .curriculum__subtitle {
+        margin-left: 0;
+    }
+
+    .curriculum__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .program-card {
+        padding: 25px 20px;
+    }
+
+    .program-card__icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .program-card__title {
+        font-size: 20px;
+    }
+
+    .program-card__features li {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Base */
+.acs-approach-wrapper {
+    padding: 50px 5%;
+    background: #ffffff;
+}
+
+
+/* Professional Card Styling */
+.acs-approach-card {
+    background: #fff;
+    padding: 45px 30px;
+    border-radius: 12px;
+    border: 1px solid var(--accent);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top accent line on hover */
+.acs-approach-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.acs-approach-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* Icon Wrap Animation */
+.approach-icon-wrap {
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 180, 216, 0.08);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    transition: 0.5s;
+}
+
+.acs-approach-card:hover .approach-icon-wrap {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Professional List (Tickets/Icons) */
+.acs-tick-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.acs-tick-list li {
+    font-size: 15px;
+    color: var(--text-gray);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+}
+
+.acs-tick-list li i {
+    color: var(--accent); /* Professional Green for checks */
+    font-size: 14px;
+}
+
+/* Hover elevation */
+.acs-approach-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: var(--accent);
+}
+
+/* --- MOBILE CSS --- */
+@media (max-width: 768px) {
+    .acs-approach-wrapper {
+        padding: 50px 20px;
+    }
+
+    .acs-header {
+        text-align: left; /* Mobile lo header left alignment neat ga untundi */
+    }
+    
+    .acs-underline {
+        margin: 10px 0 20px 0;
+    }
+
+    .acs-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .acs-approach-card {
+        padding: 35px 25px;
+    }
+
+    /* Mobile performance kosam animations optimize chesam */
+    .acs-approach-card:hover {
+        transform: translateY(-5px);
+    }
+}

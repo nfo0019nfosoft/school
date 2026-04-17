@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Website</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+  
+  <div class="nav-container">
+
+    <div class="nav">
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="School Logo">
+        </a>
+      </div>
+
+      <!-- MENU ICON -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- NAV LINKS (desktop) -->
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+  <!-- JS -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero-page" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070');">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-container" data-aos="fade-up">
+        <span class="hero-badge">Quality Education</span>
+        
+        <h1 class="hero-title">ABOUT US</h1>
+        
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="arrow-icon"><i class="ri-arrow-right-double-line"></i></span>
+            <span class="current-page">About Us</span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="about-modern">
+    <div class="container">
+        
+        <div class="about-flex-top">
+            <div class="about-img-container" data-aos="fade-right">
+                <img src="https://img.freepik.com/free-vector/large-school-building-scene_1308-32058.jpg?semt=ais_hybrid&w=740&q=80" alt="School Building">
+                <div class="experience-badge">
+                    <h3>25+</h3>
+                    <p>Years of Excellence</p>
+                </div>
+            </div>
+
+            <div class="about-text-container" data-aos="fade-left">
+                <span class="tagline">EMPOWERING THE FUTURE</span>
+                <h2>Nurturing Excellence Through <span>Modern Education</span></h2>
+                <p class="description">
+              
+Our institution is dedicated to nurturing young minds through quality education, 
+innovative teaching methods, and a supportive learning environment. We believe in 
+building a strong foundation for every student, empowering them with knowledge, 
+confidence, and essential life skills.
+</p>
+
+            <p class="description">
+With a team of experienced faculty and modern infrastructure, we focus on holistic 
+development that goes beyond academics. Our goal is to inspire creativity, critical 
+thinking, and a lifelong passion for learning.We strive to create responsible individuals who are well-prepared to face future 
+challenges and contribute positively to society.
+</p>
+               
+            </div>
+        </div>
+
+        <div class="about-features-grid">
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h4>Qualified Teachers</h4>
+                <p>Expert faculty dedicated to student success and mentorship.</p>
+            </div>
+
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
+                <h4>Student Focused</h4>
+                <p>Personalized learning tailored to every child's unique needs.</p>
+            </div>
+
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h4>Discipline & Values</h4>
+                <p>Strong emphasis on character building and ethical values.</p>
+            </div>
+
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="card-icon"><i class="fas fa-running"></i></div>
+                <h4>Co-curricular</h4>
+                <p>A perfect balance of sports, arts, and academic growth.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="vms-area-wrapper">
+    <div class="vms-custom-container">
+        
+        <div class="vms-main-header" data-aos="fade-down">
+            <span class="vms-sub-label">OUR CORE VALUES</span>
+            <h2 class="vms-title-text">Inspiring Minds through <span>Vision & Mission</span></h2>
+            <div class="vms-animated-line-wrap">
+                <div class="vms-track-line">
+                    <span class="vms-moving-dot"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="vms-cards-grid">
+            
+            <div class="vms-creative-card" data-aos="fade-up">
+                <div class="vms-top-border-grow"></div>
+                <div class="vms-card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3 class="vms-card-title">Our Vision</h3>
+                <p class="vms-card-desc">To be a premier educational institution that nurtures future leaders through innovation, creativity, and excellence. We strive to create a global community of lifelong learners who contribute positively to society with integrity and compassion.</p>
+                <div class="vms-watermark-num">01</div>
+            </div>
+
+            <div class="vms-creative-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="vms-top-border-grow"></div>
+                <div class="vms-card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3 class="vms-card-title">Our Mission</h3>
+                <p class="vms-card-desc">Our mission is to provide a holistic learning environment that empowers students to achieve academic brilliance and personal growth. We are committed to fostering critical thinking, ethical values, and social responsibility in every child.</p>
+                <div class="vms-watermark-num">02</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="pms-section-wrapper">
+    <div class="pms-custom-container">
+        <div class="pms-flex-row">
+            
+            <div class="pms-image-col" data-aos="fade-right">
+                <div class="pms-img-frame">
+                    <img src="https://cdn-icons-png.freepik.com/256/6857/6857480.png?semt=ais_white_label" alt="Principal Name" class="pms-main-img">
+                    <div class="pms-experience-badge">
+                        <span class="pms-exp-num">25+</span>
+                        <span class="pms-exp-txt">Years Exp.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pms-content-col" data-aos="fade-left">
+                <div class="pms-header-meta">
+                    <span class="pms-lead-label">FROM THE PRINCIPAL’S DESK</span>
+                    <h2 class="pms-main-title">A Message from the <span>Principal</span></h2>
+                </div>
+                
+                <div class="pms-message-box">
+                    <i class="fas fa-quote-left pms-quote-icon"></i>
+                    <p class="pms-text">
+                        Education is not just about academic excellence; it's about character building and nurturing young minds to face the global challenges of tomorrow. At our institution, we believe in providing a platform where every student can discover their unique potential.
+                    </p>
+                    <p class="pms-text">
+                        Our holistic approach ensures that children grow up to be responsible, compassionate, and innovative global citizens. We invite you to be a part of this transformative journey.
+                    </p>
+                </div>
+
+                <div class="pms-signature-area">
+                    <h4 class="pms-name">Dr. Sarah Johnson</h4>
+                    <p class="pms-designation">Principal, Academic Excellence School</p>
+                    <div class="pms-social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
